@@ -18,7 +18,7 @@ CORS(app)
 stemmer = PorterStemmer()
 stop_words = set(stopwords.words('english'))
 
-@app.route('/hello', methods=['GET'])
+@app.route('/', methods=['GET'])
 def hello():
     return jsonify({"message": "Hello from Flask!"})
 
