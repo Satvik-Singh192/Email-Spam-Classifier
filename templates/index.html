@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Spam Classifier</title>
+</head>
+<body>
+    <h1>Email Spam Classifier</h1>
+    <form method="POST" action="/">
+        <label for="sentence">Paste Email Text:</label><br>
+        <textarea id="sentence" name="sentence" rows="10" cols="50" required></textarea><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if sentence %}
+        <h2>Prediction Result:</h2>
+        <p><strong>Input:</strong> {{ sentence }}</p>
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        <p><strong>Probability:</strong> {{ probability }}</p>
+    {% endif %}
+</body>
+</html>
